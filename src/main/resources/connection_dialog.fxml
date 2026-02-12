@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.ui.ConnectionDialogController"
+      spacing="5" padding="10">
+
+    <Label text="URL JDBC:"/>
+    <TextField fx:id="txtUrl"/>
+
+    <Label text="Usuario:"/>
+    <TextField fx:id="txtUser"/>
+
+    <Label text="Contraseña:"/>
+    <PasswordField fx:id="txtPassword"/>
+
+    <Label text="Tabla:"/>
+    <TextField fx:id="txtTable"/>
+
+    <Label text="Columna PK:"/>
+    <TextField fx:id="txtPk"/>
+
+    <Button text="Conectar" onAction="#onConnect"/>
+</VBox>
+

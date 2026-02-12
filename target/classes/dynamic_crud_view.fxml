@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.ui.DynamicCrudController">
+
+    <top>
+        <ToolBar>
+            <Button text="Nuevo" onAction="#onNuevo"/>
+            <Button text="Guardar" onAction="#onGuardar"/>
+            <Button text="Eliminar" onAction="#onEliminar"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <TableView fx:id="tableView"/>
+    </center>
+
+    <bottom>
+        <ScrollPane fitToWidth="true">
+            <VBox fx:id="formContainer" spacing="5" padding="10"/>
+        </ScrollPane>
+    </bottom>
+</BorderPane>
+
