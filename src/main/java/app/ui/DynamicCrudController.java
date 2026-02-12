@@ -102,7 +102,6 @@ public class DynamicCrudController {
 
             GenericRow selected = tableView.getSelectionModel().getSelectedItem();
             if (selected != null) {
-                // aseguramos que la PK se mantiene igual
                 row.put(primaryKey, selected.get(primaryKey));
                 service.update(row);
             } else {
@@ -138,4 +137,3 @@ public class DynamicCrudController {
         e.printStackTrace();
     }
 }
-
