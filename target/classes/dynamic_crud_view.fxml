@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
@@ -20,7 +21,11 @@
 
     <bottom>
         <ScrollPane fitToWidth="true">
-            <VBox fx:id="formContainer" spacing="5" padding="10"/>
+            <VBox fx:id="formContainer" spacing="5">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+            </VBox>
         </ScrollPane>
     </bottom>
 </BorderPane>

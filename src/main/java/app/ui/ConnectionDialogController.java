@@ -21,7 +21,7 @@ public class ConnectionDialogController {
         // Valores por defecto para PostgreSQL
         txtUrl.setText("jdbc:postgresql://localhost:5432/notas");
         txtUser.setText("postgres");
-        txtPassword.setText("postgres");
+        txtPassword.setText("27418291");
         txtTable.setText("materias");
         txtPk.setText("id_materia");
     }

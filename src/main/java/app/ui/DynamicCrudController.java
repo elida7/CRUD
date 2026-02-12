@@ -97,7 +97,22 @@ public class DynamicCrudController {
             GenericRow row = new GenericRow();
             for (String col : columnNames) {
                 String text = fieldMap.get(col).getText();
-                row.put(col, text.isEmpty() ? null : text);
+                if (text.isEmpty()) {
+                    row.put(col, null);
+                } else {
+                    // Intentamos inferir tipos básicos (Integer / Double); si falla, se mantiene como String
+                    Object value;
+                    try {
+                        value = Integer.valueOf(text);
+                    } catch (NumberFormatException exInt) {
+                        try {
+                            value = Double.valueOf(text);
+                        } catch (NumberFormatException exDouble) {
+                            value = text;
+                        }
+                    }
+                    row.put(col, value);
+                }
             }
 
             GenericRow selected = tableView.getSelectionModel().getSelectedItem();
